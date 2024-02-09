@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>qt</class>
+    <widget class="QMainWindow" name="qt">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>930</width>
+                <height>640</height>
+            </rect>
+        </property> 
+        <property name="styleSheet">
+            <string notr="true">
+                font-size: 14px;
+                color: lightblue;
+                background-color: #102561;
+            </string>
+        </property>
+        <property name="cursor">
+            <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="windowTitle">
+            <string>AT-MANAGER</string>
+        </property>
+        <widget class="QLabel" name="label_3">
+            <property name="text">
+                <string>Terminal de paramètrage Bluetooth HC-05</string>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>15</x>
+                    <y>5</y>
+                    <width>400</width>
+                    <height>25</height>
+                </rect>
+            </property>
+        <property name="styleSheet">
+            <string notr="true">
+                font-size: 20px;
+                color: lightblue;
+                background-color: #102561;
+            </string>
+        </property>
+        </widget>
+        <widget class="QLabel" name="baudrate_label">
+            <property name="text">
+                <string>Baud Rate:</string>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>60</y>
+                    <width>100</width>
+                    <height>30</height>
+                </rect>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 16px;
+                    color: white;
+                </string>
+            </property>
+        </widget>
+        <widget class="QComboBox" name="baudrate_selector">
+            <property name="geometry">
+                <rect>
+                    <x>150</x>
+                    <y>60</y>
+                    <width>100</width>
+                    <height>30</height>
+                </rect>
+            </property>
+            <item>
+                <property name="text">
+                <string>9600</string>
+                </property>
+            </item>
+            <item>
+                <property name="text">
+                <string>19200</string>
+                </property>
+            </item>
+            <item>
+                <property name="text">
+                <string>38400</string>
+                </property>
+            </item>
+            <item>
+                <property name="text">
+                <string>57600</string>
+                </property>
+            </item>
+            <item>
+                <property name="text">
+                <string>115200</string>
+                </property>
+            </item>
+            <item>
+                <property name="text">
+                <string>1000000</string>
+                </property>
+            </item>
+        </widget>
+        <widget class="QPushButton" name="stop_com">
+            <property name="geometry">
+                <rect>
+                    <x>15</x>
+                    <y>110</y>
+                    <width>80</width>
+                    <height>30</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>STOP</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                font-size: 14px;
+                color: white;
+                background-color: grey;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="start_com">
+            <property name="geometry">
+                <rect>
+                    <x>105</x>
+                    <y>110</y>
+                    <width>80</width>
+                    <height>30</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>START</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                font-size: 14px;
+                color: white;
+                background-color: grey;
+                </string>
+            </property>
+        </widget>
+        <widget class="QLabel" name="connection_status_label">
+            <property name="styleSheet">
+                <string notr="true"/>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>220</x>
+                    <y>112</y>
+                    <width>150</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Not Connected</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 20px;
+                    color: red;
+                    background-color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QLabel" name="port_com_label">
+          <property name="geometry">
+            <rect>
+              <x>380</x>
+              <y>110</y>
+              <width>100</width>
+              <height>30</height>
+            </rect>
+          </property>
+          <property name="text">
+            <string>COM ???</string>
+          </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 20px;
+                    color: white;
+                </string>
+            </property>
+        </widget>
+        <widget class="QTextEdit" name="receive_box">
+            <property name="geometry">
+                <rect>
+                    <x>15</x>
+                    <y>150</y>
+                    <width>900</width>
+                    <height>300</height>
+                </rect>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 16px;
+                    color: white;
+                    background-color: rgba(220, 220, 220, 0.4);
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="send_at">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>460</y>
+                    <width>90</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>AT</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 12px;
+                    background: #7FD0FC;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="send_at_name">
+            <property name="geometry">
+                <rect>
+                    <x>120</x>
+                    <y>460</y>
+                    <width>90</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>AT+NAME?</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 12px;
+                    background: #7FD0FC;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="send_at_addr">
+            <property name="geometry">
+                <rect>
+                    <x>220</x>
+                    <y>460</y>
+                    <width>90</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>AT+ADDR?</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 12px;
+                    background: #7FD0FC;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="send_at_version">
+            <property name="geometry">
+                <rect>
+                    <x>320</x>
+                    <y>460</y>
+                    <width>90</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>AT+VERSION?</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 12px;
+                    background: #7FD0FC;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="send_at_uart">
+            <property name="geometry">
+                <rect>
+                    <x>420</x>
+                    <y>460</y>
+                    <width>90</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>AT+UART?</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 12px;
+                    background: #7FD0FC;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="send_at_password">
+            <property name="geometry">
+                <rect>
+                    <x>520</x>
+                    <y>460</y>
+                    <width>90</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>AT+PSWD?</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 12px;
+                    background: #7FD0FC;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="write_at_name">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>490</y>
+                    <width>90</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>NAME=</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 14px;
+                    background: #7FFCA3;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="write_at_pswd">
+            <property name="geometry">
+                <rect>
+                    <x>120</x>
+                    <y>490</y>
+                    <width>90</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>PSWD=</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 14px;
+                    background: #7FFCA3;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="write_at_uart">
+            <property name="geometry">
+                <rect>
+                    <x>220</x>
+                    <y>490</y>
+                    <width>90</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>UART=</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 14px;
+                    background: #7FFCA3;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="write_reset">
+            <property name="geometry">
+                <rect>
+                    <x>320</x>
+                    <y>490</y>
+                    <width>90</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>RESET</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 14px;
+                    background: #F66D62;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QLabel" name="new_data_label">
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>520</y>
+                    <width>451</width>
+                    <height>31</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Send DATA:</string>
+            </property>
+        </widget>
+        <widget class="QTextEdit" name="new_data_value">
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>550</y>
+                    <width>501</width>
+                    <height>41</height>
+                </rect>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 20px;
+                    color: black;
+                    background-color: rgba(220, 220, 220, 0.2);
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="active_ret_carr">
+            <property name="geometry">
+                <rect>
+                    <x>522</x>
+                    <y>558</y>
+                    <width>25</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>\r</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 16px;
+                    background: #FC7F7F;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="active_ret_line">
+            <property name="geometry">
+                <rect>
+                    <x>560</x>
+                    <y>558</y>
+                    <width>25</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>\n</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 16px;
+                    background: #FC7F7F;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="send_but">
+            <property name="geometry">
+                <rect>
+                    <x>600</x>
+                    <y>550</y>
+                    <width>101</width>
+                    <height>41</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>SEND</string>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">
+                    font-size: 16px;
+                    background: lightgreen;
+                    color: black;
+                </string>
+            </property>
+        </widget>
+    </widget>
+</ui>
